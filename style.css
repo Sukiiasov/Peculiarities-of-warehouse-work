@@ -1,0 +1,181 @@
+/* 1. 1st page
+1.1 aside
+1.2 main
+2. 2nd page
+2.1 main */
+
+/* 1. 1st page */
+
+* {
+box-sizing: border-box;
+}
+
+html {
+font-size: 16px;
+font-variant: small-caps;
+font-family: 'Fraunces', serif;
+scroll-behavior: smooth;
+}
+
+body {
+margin: 0;
+min-width: 1340px;
+}
+
+ul, li {
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+a {
+text-decoration: none;
+color: rgb(255, 255, 255);
+}
+
+.flexbox_main {
+display: flex;
+}
+
+span{
+    border-bottom: 3px solid rgb(160, 0, 0);
+}
+
+/* 1.1 aside */
+aside {
+padding: 20px;
+min-width: 240px;
+background-color: currentColor;
+padding-top: 50px;
+border-right: 1px solid white;
+}
+
+aside h1 {
+text-align: center;
+color: white;
+margin-bottom: 30px;
+width: 200px;
+}
+
+aside li {
+padding-left: 25px;
+list-style: none;
+background-image: url(img/loader1.png);
+background-repeat: no-repeat;
+background-size: 27px;
+background-position: center left;
+height: 72px;
+display: flex;
+flex-direction: column-reverse;
+justify-content: center;
+font-size: 14px;
+}
+
+aside a {
+transform: rotate(2deg);
+}
+
+aside li::before {
+content: '';
+display: block;
+width: 0;
+height: 2px;
+background-color: #ffffff;
+transition-duration: 0.3s;
+margin-left: auto;
+margin-right: 0;
+}
+
+aside li:hover::before {
+width: 100%;
+margin-left: 0;
+margin-right: auto;
+transform: rotate(2deg);
+}
+
+/* 1.2 main */
+main {
+background-image: url(img/logistics.jpg);
+background-size: contain;
+background-repeat: repeat;
+flex-grow: 1;
+}
+
+main .container {
+padding: 20px;
+backdrop-filter: blur(5px);
+}
+
+.title {
+background: rgba(0, 0, 0, 0.8);
+color: white;
+width: 90%;
+border-radius: 15px;
+text-align: center;
+padding: 20px;
+margin: 20px auto;
+}
+
+.main_content {
+padding: 20px;
+margin: 23px;
+background: rgba(0, 0, 0, 0.8);
+color: white;
+width: 80%;
+border-radius: 15px;
+display: flex;
+align-items: center;
+}
+
+.main_content img {
+width: 345px;
+height: 230px;
+border-radius: 15px;
+}
+
+.content {
+margin: 15px;
+border-top: 2px solid white;
+}
+
+.content li {
+margin: 10px 0 10px 20px;
+list-style: disc;
+}
+
+.main_content:nth-child(odd) {
+border-left: 0;
+}
+
+.main_content:nth-child(even) {
+margin-left: auto;
+border-right: 0;
+}
+
+.last_title {
+padding-top: 20px;
+color: white;
+font-weight: 200;
+font-size: 15px;
+}
+
+/* butoon "GO-Top" */
+main {
+position: relative;
+}
+
+.up-btn-wrap {
+position: absolute;
+right: 30px;
+bottom: 0;
+top: 20%;
+}
+
+.up-btn {
+display: block;
+padding: 10px;
+text-align: center;
+position: sticky;
+transform: translateY(100vh);
+top: -80px;
+}
